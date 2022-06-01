@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./node_modules/jquery/dist/jquery.min.js" />
+    <link rel="stylesheet" href="./node_modules/tether/dist/js/tether.min.js" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <title>Test</title>
+  </head>
+  <body>
+    <ul class="nav nav-tabs nav-justified flex-column flex-sm-row">
+      <li class="nav-item"><a href="#" class="nav-link active">Active</a></li>
+      <li class="nav-item-dropdown nav-item">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+          >Dropdown</a
+        >
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item">Action</a
+          ><a href="#" class="dropdown-item">Another Action</a
+          ><a href="#" class="dropdown-item">Something else</a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">Separated link</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+      <li class="nav-item">
+        <a href="#" class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
+
+    <div class="container">
+      <div class="accordion wraper">
+        <div id="accordion">
+          <!--  -->
+          <div class="card">
+            <div class="card-header" id="HeaderOne">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+              >
+                Collapsable group 1
+              </button>
+            </div>
+            <div
+              class="collapse show"
+              id="collapseOne"
+              data-parent="#accordion"
+            >
+              <div class="card-body">this is part 1</div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="card">
+            <div class="card-header" id="HeaderTwo" data-parent="#accordion">
+              <button
+                class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapseTwo"
+              >
+                Collapsable group 2
+              </button>
+            </div>
+            <div class="collapse" id="collapseTwo">
+              <div class="card-body">this is part 2</div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="card">
+            <div class="card-header" id="HeaderThree" data-parent="#accordion">
+              <button
+                class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapseThree"
+              >
+                Collapsable group 3
+              </button>
+            </div>
+            <div class="collapse" id="collapseThree">
+              <div class="card-body">this is part 3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
